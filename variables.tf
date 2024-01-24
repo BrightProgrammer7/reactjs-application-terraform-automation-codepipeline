@@ -12,7 +12,7 @@ variable "pipeline_bucket_name" {
 }
 
 variable "app_bucket_name" {
-  default     = "TerraformAWS-webapp-abdelilah"
+  default     = "webapp-bucket-abdelilah"
   description = "app bucket name"
 }
 
@@ -22,7 +22,7 @@ variable "projectname" {
 }
 
 variable "repo_id" {
-  default     = "TerraformAWS-cloud/vitejs-app-for-s3-static-webhosting"
+  default     = "BrightProgrammer7/TerraformAWS"
   description = "github repository id"
 }
 
