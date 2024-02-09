@@ -1,0 +1,2 @@
+#  "Resource": ["arn:aws:s3:::${var.app_bucket_name}", "arn:aws:s3:::${var.app_bucket_name}/*" ]
+# arn:aws:s3:::${var.BUCKETNAME}/*

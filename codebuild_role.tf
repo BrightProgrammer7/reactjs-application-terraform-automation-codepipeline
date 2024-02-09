@@ -1,6 +1,6 @@
 ############################### CODEBUILD ROLE ######################################
 resource "aws_iam_role" "codebuild_role1" {
-  name = "${var.projectname}-codebuild-role"
+  name = "${var.project_name}-codebuild-role"
 
   assume_role_policy = <<EOF
 {
@@ -22,7 +22,7 @@ data "aws_region" "current" {}
 data "aws_caller_identity" "current" {}
 
 resource "aws_iam_role_policy" "codebuild_policy1" {
-  name = "${var.projectname}-codebuild-policy"
+  name = "${var.project_name}-codebuild-policy"
   role = aws_iam_role.codebuild_role1.id
 
   policy = <<EOF

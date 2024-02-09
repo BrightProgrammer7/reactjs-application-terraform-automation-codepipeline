@@ -1,5 +1,5 @@
 resource "aws_codepipeline" "codepipeline1" {
-  name     = "${var.projectname}-pipeline"
+  name     = "${var.project_name}-pipeline"
   role_arn = aws_iam_role.codepipeline_role1.arn
 
   artifact_store {
@@ -67,4 +67,8 @@ resource "aws_codepipeline" "codepipeline1" {
 
 data "aws_codestarconnections_connection" "github" {
   arn = var.connection_arn
+
 }
+# arn = "arn:aws:codepipeline:us-east-1:010993157985:${var.project_name}-pipeline"
+
+# arn = "arn:aws:s3:::${var.app_bucket_name}"

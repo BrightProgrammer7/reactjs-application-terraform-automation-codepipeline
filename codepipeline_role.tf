@@ -1,6 +1,6 @@
 ################################### CODEPIPELINE ROLE ###############################################
 resource "aws_iam_role" "codepipeline_role1" {
-  name = "${var.projectname}-codepipeline-role"
+  name = "${var.project_name}-codepipeline-role"
 
   assume_role_policy = <<EOF
 {
@@ -19,7 +19,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "codepipeline_policy1" {
-  name = "${var.projectname}-codepipeline-policy"
+  name = "${var.project_name}-codepipeline-policy"
   role = aws_iam_role.codepipeline_role1.id
 
   policy = <<EOF
